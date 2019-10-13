@@ -1,0 +1,59 @@
+
+% Don't number slides, but do include a progress bar
+\usetheme[progressbar=frametitle, numbering=none]{metropolis}
+
+% Maths stuff
+\usepackage{amsmath, amssymb}
+\usepackage{appendixnumberbeamer}
+% Print directory trees
+\usepackage{dirtree}
+% Include code
+\usepackage{verbatim}
+\usepackage{listings}
+% Improvements on \ref
+\usepackage[capitalise, noabbrev]{cleveref}
+% Improved tables
+\usepackage{booktabs}
+% Hyperlinking
+\usepackage{hyperref}
+% Table generation tool
+\usepackage{pgfplotstable}
+\usepackage[T1]{fontenc}
+% Use the FiraSans font
+\usepackage[lf]{FiraSans}
+\usepackage{xcolor}
+
+\setbeamercolor{emph}{fg=mLightGreen}
+\renewcommand{\emph}{{\usebeamercolor[fg]{emph}}}
+
+\graphicspath{{assets/}}
+
+% Syntax highlighting in code
+\lstset{%
+  basicstyle=\small\ttfamily,
+  language=[LaTeX]{TeX},
+  keywordstyle=\color{mLightBrown}\ttfamily,
+  commentstyle=\color{mDarkBrown},
+  emphstyle={\color{mLightGreen}\ttfamily},
+  % Extra words to be styled with \emphstyle
+  emph={toprule,cmidrule,midrule,bottomrule,cref,title,author,volume,year,
+	publisher,Element,Number,Mass,citet,citep,include,graphicspath,
+ 	includeonly,newcommand},
+  % Extra words to be styled with \keywordstyle
+  morekeywords={pgfplotstabletypeset,@book},
+  belowskip=0pt
+}
+
+\definecolor{link_purple}{HTML}{660066}
+% Style hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=mDarkTeal,
+    urlcolor=link_purple
+}
+
+% Commands for section on macros
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\plusbinomial}[3][2]{(#2 + #3)^#1}
+

@@ -1,0 +1,182 @@
+
+\section{Managing large documents}
+
+\begin{frame}[fragile]{Modular \LaTeX}
+\begin{itemize}
+  \item For smaller projects it is okay to keep everything in a single
+	\lstinline|.tex| file
+  \item For more involved projects (your thesis) this approach quickly
+		becomes cumbersome
+  \item The \lstinline|\include| command makes it possible to
+		break your document down into smaller chunks
+  \item Working with smaller chunks is more manageable 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Structure}
+An example structure for a thesis project could look like the following:
+\\\vspace{0.5cm}
+\dirtree{%
+.1 thesis/. 
+.2 thesis.tex. 
+.2 chapters/. 
+.3 chapter\_1.tex. 
+.3 chapter\_2.tex. 
+.3 chapter\_3.tex. 
+.2 internal/. 
+.3 preamble.tex. 
+.2 fig/.
+.3 science.png.
+.2 references.bib. 
+}
+\end{frame}
+
+\begin{frame}[fragile]{Example thesis.tex}
+\begin{lstlisting}
+\documentclass[12pt]{report}
+
+\include{internal/preamble} 
+
+\begin{document}
+
+\include{chapters/chapter_1}
+\include{chapters/chapter_2}
+\include{chapters/chapter_3}
+
+\bibliography{references}
+
+\end{document}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Example internal/preamble.tex}
+\begin{lstlisting}
+% Preamble, packages, commands etc.
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{cleveref}
+\usepackage{graphicx}
+\end{lstlisting}
+\vspace{-0.2cm}\vdots
+\begin{lstlisting}
+% Make it easier to include figures 
+\graphicspath{{fig/}}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Example chapters/chapter\_1.tex}
+\begin{lstlisting}
+\chapter{Literature review}
+\label{cha:lit_review}
+
+Here's stuff others did which I don't really
+understand\ldots
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Compile a single chapter}
+\lstinline|\includeonly| allows the compilation of a single chapter,
+without messing up references, page numbers etc.
+\begin{lstlisting}
+\documentclass[12pt]{report}
+
+\include{internal/preamble}
+\includeonly{chapters/chapter_2}
+
+\begin{document}
+
+\include{chapters/chapter_1}
+\include{chapters/chapter_2}
+\include{chapters/chapter_3}
+\end{lstlisting}
+
+\vspace{-0.2cm}\vdots
+\end{frame}
+
+\begin{frame}{masthesis.sty}
+\begin{itemize}
+  \item \href{https://wiki.mas.ncl.ac.uk/mas/ThesisTemplate?highlight=\%28masthesis\%29}%
+	{A thesis template for MSP students}
+  \item The template is modular and has a structure similar to the one given
+	  above
+  \item For non-MSP students, or those who would like a different style, 
+	  \href{https://ctan.org/pkg/classicthesis?lang=en}%
+	  {the `classic thesis' style} is a good option
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Version control}
+\begin{itemize}
+  \item Version control allows you to track and manage changes in code, and
+	  collaborate with others
+  \item I'd recommend using version control to manage your thesis
+  \item Plug: a colleague and I are teaching an upcoming PGRDP workshop
+	  \href{https://workshops.ncl.ac.uk/view/book/modal/43153/}%
+	  {Introduction to Git and GitHub}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Spell checking}
+Spell checking \texttt{.tex} files is complicated by latex commands.
+
+For those comfortable working at the command line I'd recommend
+\href{http://aspell.net/}{aspell} 
+(or \href{https://www.gnu.org/software/ispell/}{ispell}
+or \href{http://hunspell.github.io/}{hunspell}).
+
+Interactive spell-check:
+\begin{lstlisting}
+$ aspell -t -c chapters/chapter1.tex
+\end{lstlisting}
+Non interactive spell-check (lists mistakes):
+\begin{lstlisting}
+$ cat chapters/chapter1.tex | aspell list -t
+\end{lstlisting}%
+Custom dictionary and commands to ignore can be added with
+\lstinline|--add-extra-dicts| and \lstinline|--conf| respectively
+\end{frame}
+
+\begin{frame}[fragile]{Spell checking}
+Some IDEs have inbuilt spell checkers:
+\begin{itemize}
+  \item \href{http://www.xm1math.net/texmaker/}{Texmaker}
+	  (checks contents of commands still)
+  \item \href{https://www.texstudio.org/}{Texstudio} (seems to have the best
+	   spellchecker)
+\end{itemize}
+More generally:
+\href{https://tex.stackexchange.com/questions/339/latex-editors-ides}%
+{here is a list of editors} and their features
+\end{frame}
+
+\begin{frame}[fragile]{Word count}
+For final submission (it will creep up on you, I promise) you \textsl{need}
+to submit a word count.
+
+Counting words in a .tex file is again complicated by the presence of latex
+commands.
+
+For command line users I'd recommend trying
+\href{https://www.freebsd.org/cgi/man.cgi?query=detex}{detex} and 
+\href{http://pubs.opengroup.org/onlinepubs/9699919799/utilities/wc.html}{wc}:
+\begin{lstlisting}
+$ detex -le equation,table thesis.tex | wc -w
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Word count}
+\begin{itemize}
+\item \href{http://app.uio.no/ifi/texcount/online.php}{Online tool}
+	  (chapters counted one at at time)
+\item \href{http://www.xm1math.net/texmaker/}{Texmaker}'s integrated pdf
+	   viewer has wordcount (right click pdf)
+\item \href{https://www.texstudio.org/}{Texstudio} (tools $\rightarrow$
+	  analyze text; chapters one at a time)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[standout]
+\href{https://jwalton.info/assets/teaching/latex/exercise_1.pdf}%
+{\color{white}Exercise 1}
+\end{frame}

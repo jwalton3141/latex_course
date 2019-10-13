@@ -1,0 +1,27 @@
+\usepackage[mathtabular,minionint,mathlf]{MinionPro}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage[fontsize=13pt]{scrextend} 
+\usepackage{dirtree}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+
+\pagenumbering{gobble}
+\definecolor{link_purple}{HTML}{660066}
+
+\hypersetup{hidelinks,
+	    colorlinks=true,
+	    allcolors=link_purple}
+
+% Renew table environment to always centre content and use Minion Pro's tabular
+% lining figures
+\let\originaltable\table
+\let\endoriginaltable\endtable
+\renewenvironment{table}[1][ht]{%
+	\originaltable[#1]
+	\centering
+	\figureversion{tabular,lf}
+	}%
+	{\endoriginaltable}
+

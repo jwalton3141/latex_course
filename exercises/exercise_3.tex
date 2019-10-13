@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\include{assets/preamble}
+
+\begin{document}
+
+\begin{center}
+  \Large\textsc{Exercise 3}
+\end{center}
+
+\noindent Let's try use some of the things we learnt in the last section. If you
+get stuck at any point put your hand up and I'll come over to help.\\
+
+\begin{enumerate}
+
+\item Create a document \texttt{packages.tex} in the \texttt{sage\_latex} folder.
+
+\item{ In \texttt{packages.tex} recreate the following table with the help of
+ the \texttt{booktabs} package:
+
+\begin{table}[h]
+\begin{tabular}{@{}lrr@{}}
+\toprule
+& \textbf{£m} & \textbf{\$m (exchange rate as of 31.07.2018)} \\\midrule
+Funding Council Grants & 70.0 & 91.7 \\
+Academic fees and support grants & 252.4 & 330.6 \\
+Research grants and contracts & 109.4 & 143.3\\
+Other operating income & 73.7 & 95.5 \\
+Endowment income and interest & 5.6 & 7.3\\\midrule
+\textbf{Total} & \textbf{511.1} & \textbf{669.5} \\\bottomrule
+\end{tabular}
+\caption{Newcastle University income (year ended 31 July 2018)}
+\label{tab:newcy}
+\end{table}
+}
+
+\item Add a label to the table and refer to it in the text
+ ``See \cref{tab:newcy}'', using the \texttt{cleveref} package. \textsl{Recall:} 
+ labels must be attached to the \texttt{caption} of the table.
+
+\item Add the \texttt{hyperref} pacakge to the document's preamble.
+Compile \texttt{packages.tex}.
+ \textsl{Note:} \texttt{hyperref} must be loaded before \texttt{cleveref} in the
+preamble. 
+\item Take a look at
+ \href{tftp://tug.ctan.org/pub/tex-archive/macros/latex/contrib/hyperref/doc/options.pdf}%
+{this list of options that} \texttt{hyperref} can take. Pass options to 
+\texttt{hyperref} so that:
+\begin{enumerate}
+\item Links do not display with boxes around them
+\item Links are indicated by coloured text
+\item All links are coloured magenta
+\end{enumerate}
+\textsl{Hint:} take a look at the options \texttt{hidelinks},
+ \texttt{colorlinks} and \texttt{allcolors}.
+
+\end{enumerate}
+
+\end{document}
