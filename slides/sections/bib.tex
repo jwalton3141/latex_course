@@ -39,7 +39,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{\text{\textbackslash usepackage\{natbib\}}}
+\begin{frame}[fragile]{\text{\tb usepackage\{natbib\}}}
   \begin{itemize}
     \item \href{https://ctan.org/pkg/natbib?lang=en}{natbib} can be used to
       implement author-year citations.
@@ -55,8 +55,11 @@
   have to run \LaTeX\ a number of times.
 
   \alert{1.} pdflatex thesis.tex
+
   \alert{2.} bibtex thesis.\alert{aux}
+
   \alert{3.} pdflatex thesis.tex
+
   \alert{4.} pdflatex thesis.tex
 
   A Makefile can simplify compilation. However, I'd recommend using

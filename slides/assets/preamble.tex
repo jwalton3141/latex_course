@@ -1,6 +1,8 @@
 
 % Don't number slides, but do include a progress bar
-\usetheme[progressbar=frametitle, numbering=none]{metropolis}
+\usetheme[progressbar=frametitle,
+        	numbering=none]%
+          {metropolis}
 
 % Maths stuff
 \usepackage{amsmath, amssymb}
@@ -11,7 +13,9 @@
 \usepackage{verbatim}
 \usepackage{listings}
 % Improvements on \ref
-\usepackage[capitalise, noabbrev]{cleveref}
+\usepackage[capitalise,
+            noabbrev]%
+            {cleveref}
 % Improved tables
 \usepackage{booktabs}
 % Hyperlinking
@@ -36,21 +40,42 @@
   commentstyle=\color{mDarkBrown},
   emphstyle={\color{mLightGreen}\ttfamily},
   % Extra words to be styled with \emphstyle
-  emph={toprule,cmidrule,midrule,bottomrule,cref,title,author,volume,year,
-	publisher,Element,Number,Mass,citet,citep,include,graphicspath,
- 	includeonly,newcommand},
+  emph={%
+    toprule,
+    cmidrule,
+    midrule,
+    bottomrule,
+    cref,
+    title,
+    author,
+    volume,
+    year,
+	  publisher,
+    Element,
+    Number,
+    Mass,
+    citet,
+    citep,
+    include,
+    graphicspath,
+ 	  includeonly,
+    newcommand},
   % Extra words to be styled with \keywordstyle
-  morekeywords={pgfplotstabletypeset,@book},
+  morekeywords={%
+    pgfplotstabletypeset,
+  @book},
   belowskip=0pt
 }
 
 \definecolor{link_purple}{HTML}{660066}
 % Style hyperlinks
 \hypersetup{
-    colorlinks=true,
-    linkcolor=mDarkTeal,
-    urlcolor=link_purple
+  colorlinks=true,
+  linkcolor=mDarkTeal,
+  urlcolor=link_purple
 }
+
+\newcommand{\tb}{\textbackslash}
 
 % Commands for section on macros
 \newcommand{\R}{\mathbb{R}}
