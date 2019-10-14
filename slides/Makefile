@@ -1,9 +1,8 @@
-.SUFFIXES: .tex .pdf 
-.PHONY: clean
-
 MAIN = main
+TEX_SOURCES = $(wildcard ./sections/*.tex)
+SOURCES = $(TEX_SOURCES) assets/preamble.tex
 
-$(MAIN).pdf: 
+$(MAIN).pdf: $(MAIN).tex $(SOURCES)
 	latexmk $(MAIN).tex
 
 clean:
