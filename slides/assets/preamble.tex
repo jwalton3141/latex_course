@@ -82,3 +82,12 @@
 \newcommand{\bb}[1]{\mathbb{#1}}
 \newcommand{\plusbinomial}[3][2]{(#2 + #3)^#1}
 
+% Spacing of entries in toc
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+  {\vskip1.5em}
+  {\vskip1.1em}
+  {}
+  {}
+\makeatother
+
