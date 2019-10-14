@@ -27,9 +27,6 @@
 \usepackage[lf]{FiraSans}
 \usepackage{xcolor}
 
-\setbeamercolor{emph}{fg=mLightGreen}
-\renewcommand{\emph}{{\usebeamercolor[fg]{emph}}}
-
 \graphicspath{{assets/}}
 
 % Syntax highlighting in code
@@ -63,11 +60,14 @@
   % Extra words to be styled with \keywordstyle
   morekeywords={%
     pgfplotstabletypeset,
-  @book},
+    @book},
+  deletekeywords={ldots},
   belowskip=0pt
 }
 
 \definecolor{link_purple}{HTML}{660066}
+\definecolor{red}{HTML}{CC0000}
+
 % Style hyperlinks
 \hypersetup{
   colorlinks=true,

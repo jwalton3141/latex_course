@@ -1,5 +1,35 @@
 \section{Common mistakes}
 
+\begin{frame}{Image formats}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Do \emph{not} use \texttt{.jpeg} files for plots (
+          \texttt{.jpeg} compresses text poorly)
+        \item If you must use a raster format use \texttt{.png}
+        \item Ideally use a vector format e.g. \texttt{.pdf}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth]{jpg_vs_png.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Avoiding image scaling}
+  \begin{itemize}
+    \item Avoid scaling your plots using the \texttt{width} argument
+      of \texttt{\tb includegraphics}
+    \item Using \texttt{width} will scale the font sizes in your plot, making it
+	  	difficult to control font size
+	  \item Aim to create your plot with the \emph{exact} dimensions you need for
+      your document
+    \item The logic to achieve this is the same for whatever plotting software
+      you use. \href{https://jwalton.info/Embed-Publication-Matplotlib-Latex/}%
+      {Here} I outline an implementation for python.
+  \end{itemize}
+\end{frame}
+
 \begin{frame}[fragile]{Hyphen, en-dash and em-dash (-, --, ---)}
   \begin{itemize}
     \item The \textcolor{mLightGreen}{hyphen} (\lstinline|-|) is used to join
