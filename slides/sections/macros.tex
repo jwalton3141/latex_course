@@ -1,38 +1,36 @@
 \section{Custom commands}
 
 \begin{frame}[fragile]{Simple macros}
-Used to simplify repetitive and/or complex formatting.
+  Used to simplify repetitive and/or complex formatting.
 
-Usually specified in the preamble
-\begin{lstlisting}
-
+  Usually specified in the preamble
+  \begin{lstlisting}
 \newcommand{\name}{definition}
-\end{lstlisting}
+  \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]{Simple macros: an example}
-\begin{lstlisting}
-
+  \begin{lstlisting}
 \newcommand{\R}{\mathbb{R}}
 
 The set of real numbers are usually represented
 by a blackboard captital r: $\R$.
-\end{lstlisting}
+  \end{lstlisting}
 
-The set of real numbers are usually represented by a blackboard capital r:
-$\R$.
+  The set of real numbers are usually represented by a blackboard capital r:
+  $\R$.
 \end{frame}
 
 \begin{frame}[fragile]{Macros with parameters}
-Macros can also be constructed to accept parameters:
-\begin{lstlisting}
+  Macros can also be constructed to accept parameters:
+  \begin{lstlisting}
 
 \newcommand{\name}[# params]{definition}
-\end{lstlisting}
+  \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]{Macros with parameters: an example}
-\begin{lstlisting}
+  \begin{lstlisting}
 \newcommand{\bb}[1]{\mathbb{#1}}
 
 Other numerical systems have similar notations. 
@@ -40,34 +38,34 @@ The complex numbers $\bb{C}$, the rational
 numbers $\bb{Q}$ and the integer numbers
 $\bb{Z}$.
 
-\end{lstlisting}
-Other numerical systems have similar notations. The complex numbers $\bb{C}$,
-the rational numbers $\bb{Q}$ and the integer numbers $\bb{Z}$.
+  \end{lstlisting}
+  Other numerical systems have similar notations. The complex numbers $\bb{C}$,
+  the rational numbers $\bb{Q}$ and the integer numbers $\bb{Z}$.
 \end{frame}
 
 \begin{frame}[fragile]{Macros with default parameters}
-It is also possible to define macros which take \textsl{default}
-\begin{lstlisting}
+  It is also possible to define macros which take \textsl{default}
+  \begin{lstlisting}
 \newcommand{\name}[# params][default #1]{def.}
 
-\end{lstlisting}
+  \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]{Macros with default parameters}
-\begin{lstlisting}
+  \begin{lstlisting}
 \newcommand{\plusbinomial}[3][2]{(#2 + #3)^#1}
 
 We make a new command to save time writing
 expressions of the form $\plusbinomial{x}{y}$
 and $\plusbinomial[4]{a}{b}$.
 
-\end{lstlisting}
-We make a new command to save time writing expressions of the form
-$\plusbinomial{x}{y}$ and $\plusbinomial[4]{a}{b}$.
+  \end{lstlisting}
+  We make a new command to save time writing expressions of the form
+  $\plusbinomial{x}{y}$ and $\plusbinomial[4]{a}{b}$.
 \end{frame}
 
 \begin{frame}[standout]
-\href{https://jwalton.info/assets/teaching/latex/exercise_2.pdf}%
-{\color{white}Exercise 2}
+  \href{https://jwalton.info/assets/teaching/latex/exercise_2.pdf}%
+  {\color{white}Exercise 2}
 \end{frame}
 

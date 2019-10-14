@@ -1,4 +1,7 @@
-\usepackage[mathtabular,minionint,mathlf]{MinionPro}
+\usepackage[mathtabular,
+            minionint,
+            mathlf]%
+            {MinionPro}
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{geometry}
@@ -10,9 +13,13 @@
 \pagenumbering{gobble}
 \definecolor{link_purple}{HTML}{660066}
 
-\hypersetup{hidelinks,
-	    colorlinks=true,
-	    allcolors=link_purple}
+\hypersetup{%
+  hidelinks,
+  colorlinks=true,
+  allcolors=link_purple
+}
+
+\setlength\parindent{0pt}
 
 % Renew table environment to always centre content and use Minion Pro's tabular
 % lining figures
@@ -25,3 +32,4 @@
 	}%
 	{\endoriginaltable}
 
+\newcommand{\tb}{\textbackslash}

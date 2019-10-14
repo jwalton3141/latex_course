@@ -1,24 +1,24 @@
 \section{Packages: a few favourites}
 
 \begin{frame}{\text{\textbackslash usepackage\{cleveref\}}}
- cleveref formats cross-references automatically
+  cleveref formats cross-references automatically
 
- See \cref{fig:lion}.
-\begin{figure}
-\centering
-\includegraphics[width=0.4\textwidth]{lion.png}
-\caption{\TeX\ the Lion.}
-\label{fig:lion}
-\end{figure}
+  See \cref{fig:lion}.
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{lion.png}
+    \caption{\TeX\ the Lion.}
+    \label{fig:lion}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]{\text{\textbackslash usepackage\{cleveref\}}}
-\begin{lstlisting}
+  \begin{lstlisting}
 % Reference as Figure 1, instead of fig. 1
 \usepackage[capitalise,noabbrev]{cleveref}
-\end{lstlisting}
-\vspace{-0.1cm}\hspace{0.25cm}\vdots 
-\begin{lstlisting}
+  \end{lstlisting}
+  \vspace{-0.1cm}\hspace{0.25cm}\vdots 
+  \begin{lstlisting}
 See \cref{fig:lion}.
 
 \begin{figure}
@@ -27,37 +27,34 @@ See \cref{fig:lion}.
  \caption{\TeX\ the Lion.}
  \label{fig:lion}
 \end{figure}
-\end{lstlisting}
+  \end{lstlisting}
 \end{frame}
 
 \begin{frame}{\text{\textbackslash usepackage\{hyperref\}}}
-
-\begin{itemize}
-\item Adds hypertext links to cross-references.
-\item See e.g. \hyperlink{toc}{\textsl{this link to the Table of Contents}},
-	the links
-	in the table of contents and the external hyperlinks throughout.
-\item \texttt{hyperref} takes many options to alter how links are displayed
-\end{itemize}
-
+  \begin{itemize}
+    \item Adds hypertext links to cross-references.
+    \item See e.g. \hyperlink{toc}{\textsl{this link to the Table of Contents}},
+    	the links
+    	in the table of contents and the external hyperlinks throughout.
+    \item \texttt{hyperref} takes many options to alter how links are displayed
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{\text{\textbackslash usepackage\{booktabs\}}}
-Booktabs can be used to enhance default tablular.
-
+  Booktabs can be used to enhance default tablular.
   \begin{table}
-      	\begin{tabular}{|l|l|r|}
-          \hline
-          \multicolumn{2}{|c|}{Item} & 		\\ \cline{1-2}
-          Animal	& Sold      & Price (\$) \\ \hline
-          Gnat		& per gram		& 13.65 		\\
-           		& each      & 0.01		\\
-          Gnu		& stuffed		& 92.50		\\
-          Emu		& stuffed		& 33.33		\\
+    \begin{tabular}{|l|l|r|}
       \hline
-      	\end{tabular}
-      	\caption{Default \LaTeX\ table.}
-    \end{table}
+      \multicolumn{2}{|c|}{Item} & 		        \\ \cline{1-2}
+      Animal & Sold              & Price (\$) \\ \hline
+      Gnat	 & per gram	         & 13.65 		  \\
+           	 & each              & 0.01		    \\
+      Gnu		 & stuffed	         & 92.50		  \\
+      Emu		 & stuffed	         & 33.33		  \\
+      \hline
+    \end{tabular}
+   	\caption{Default \LaTeX\ table.}
+  \end{table}
 \end{frame}
 
 \begin{frame}[fragile]{\text{\textbackslash usepackage\{booktabs\}}}
@@ -72,28 +69,27 @@ Booktabs can be used to enhance default tablular.
  Emu          & stuffed   & 33.33      \\\hline
 \end{tabular}
 \caption{Default \LaTeX\ table.}
-      \end{lstlisting}
-
+  \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]{\text{\textbackslash usepackage\{booktabs\}}}
   \begin{table}
-  	\begin{tabular}{llr}
-          \toprule
-          \multicolumn{2}{c}{Item}	&       \\ \cmidrule{1-2}
-          Animal	& Sold      & Price (\$) \\ \midrule
-          Gnat		& per gram		& 13.65 		 \\
-           		& each      & 0.01		 \\
-          Gnu		& stuffed		& 92.50		 \\
-          Emu		& stuffed		& 33.33		 \\
-          \bottomrule
-      \end{tabular}
-      	\caption{Booktabs table and styling.}
+    \begin{tabular}{llr}
+      \toprule
+      \multicolumn{2}{c}{Item}   & 		        \\ \cmidrule{1-2}
+      Animal & Sold              & Price (\$) \\ \midrule
+      Gnat	 & per gram	         & 13.65 		  \\
+           	 & each              & 0.01		    \\
+      Gnu		 & stuffed	         & 92.50		  \\
+      Emu		 & stuffed	         & 33.33		  \\
+      \bottomrule
+    \end{tabular}
+   	\caption{Booktabs table and styling.}
   \end{table}
 \end{frame}
 
 \begin{frame}[fragile]{\text{\textbackslash usepackage\{booktabs\}}}
-  	\begin{lstlisting}
+  \begin{lstlisting}
 \begin{tabular}{llr}
  \toprule
  \multicolumn{2}{c}{Item} & \\\cmidrule{1-2}
@@ -105,105 +101,120 @@ Booktabs can be used to enhance default tablular.
  \bottomrule
 \end{tabular}
 \caption{Booktabs improves table spacing.}
-  	\end{lstlisting}
+  \end{lstlisting}
 \end{frame}
 
 \begin{frame}[fragile]{\text{\textbackslash usepackage\{pgfplotstable\}}}
-pgfplotstable can read data in from file (e.g. a \texttt{.csv} file) and
-automatically format the data as a table.
+  pgfplotstable can read data in from file (e.g. a \texttt{.csv} file) and
+  automatically format the data as a table.
 
-Consider that I have some \texttt{.csv} file:
-\begin{lstlisting}
+  Consider that I have some \texttt{.csv} file:
+  \begin{lstlisting}
 Element,    Number,     Mass
 H,          1,          1.00794
 He,         2,          4.00260
 Li,         3,          6.94100
 Be,         4,          9.01218
-\end{lstlisting}
+  \end{lstlisting}
 \end{frame}
 
 \begin{frame}{\text{\textbackslash usepackage\{pgfplotstable\}}}
   \begin{table}
-  	\pgfplotstabletypeset[col sep=comma, string type,
-      every head row/.style={
-      	before row={\toprule
-      	       & \multicolumn{2}{c}{Atomic}
-            	\\\cmidrule{2-3}},
-      	after row={\midrule}},
+    \pgfplotstabletypeset[
+      col sep=comma,
+      string type,
+      every head row/.style={%
+        before row={%
+          \toprule
+          & \multicolumn{2}{c}{Atomic} \\
+          \cmidrule{2-3}
+        },
+        after row={\midrule}
+      },
       every last row/.style={after row=\bottomrule}
-  	]{assets/elements.csv}
-  	\caption{pgfplotstable can read input files.}
+  	  ]%
+      {assets/elements.csv}
+    \caption{pgfplotstable can read input files.}
   \end{table}
 \end{frame}
 
 \begin{frame}[fragile]{\text{\textbackslash usepackage\{pgfplotstable\}}}
   \begin{lstlisting}
-\pgfplotstabletypeset[col sep=comma,
- string type,
-
- every head row/.style={
-  before row={\toprule
-              & \multicolumn{2}{c}{Atomic}
-              \\ \cmidrule{2-3}},
-  after row={\midrule}},
- 
- every last row/.style={after row=\bottomrule}
-]{elements.csv}
-\caption{pgfplotstable can read input files.}
+\pgfplotstabletypeset[
+  col sep=comma,
+  string type,
+  every head row/.style={%
+    before row={%
+      \toprule
+      & \multicolumn{2}{c}{Atomic} \\
+      \cmidrule{2-3}
+    },
+    after row={\midrule}
+  },
+  every last row/.style={after row=\bottomrule}
+  ]%
+  {assets/elements.csv}
   \end{lstlisting}
 \end{frame}
 
 \begin{frame}{\text{\textbackslash usepackage\{pgfplotstable\}}}
-pgfplotstable can round numbers as desired:
+  pgfplotstable can round numbers as desired:
   \begin{table}
-  	\pgfplotstabletypeset[col sep=comma,
-  	columns/Number/.style={string type},
-  	columns/Element/.style={string type},
-  	columns/Mass/.style={fixed zerofill, precision=3},
-      every head row/.style={
-      	before row={\toprule
-      	       & \multicolumn{2}{c}{Atomic}
-            	\\\cmidrule{2-3}},
-      	after row={\midrule}},
+    \pgfplotstabletypeset[%
+      col sep=comma,
+  	  columns/Number/.style={string type},
+  	  columns/Element/.style={string type},
+  	  columns/Mass/.style={fixed zerofill, precision=3},
+      every head row/.style={%
+      	before row={%
+          \toprule
+          & \multicolumn{2}{c}{Atomic} \\
+          \cmidrule{2-3}
+        },
+      	after row={\midrule}
+      },
       every last row/.style={after row=\bottomrule}
-  	]{assets/elements.csv}
+  	]%
+      {assets/elements.csv}
   	\caption{pgfplotstable understands precision and rounding.}
   \end{table}
 \end{frame}
 
 \begin{frame}[fragile]{\text{\textbackslash usepackage\{pgfplotstable\}}}
   \begin{lstlisting}
-\pgfplotstabletypeset[col sep=comma,
- columns/Number/.style={string type},
- columns/Element/.style={string type},
- columns/Mass/.style={fixed zerofill, 
-                      precision=3},
+\pgfplotstabletypeset[
+  col sep=comma,
+  columns/Number/.style={string type},
+  columns/Element/.style={string type},
+  columns/Mass/.style={fixed zerofill, 
+                        precision=3},
   \end{lstlisting}
-\vspace{-0.5cm}\hspace{0.25cm}\vdots \\ \hspace{0.25cm}\vdots\quad(As in earlier example) \\ \hspace{0.25cm}\vdots
+\vspace{-0.5cm}\hspace{0.25cm}\vdots \\
+\hspace{0.25cm}\vdots\quad(As in earlier example) \\
+\hspace{0.25cm}\vdots
   \begin{lstlisting}
- \caption{pgfplotstable understands precision
-          and rounding.}
+  \caption{pgfplotstable understands precision
+           and rounding.}
   \end{lstlisting}
 \end{frame}
 
 \begin{frame}{Even \textit{more} table generators}
-In addition to pgfplotstable there are various other table generators:
-\begin{itemize}
-\item \href{https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_latex.html}%
-	{pandas.DataFrame.to\_latex} (Python users)
-\item \href{https://www.rdocumentation.org/packages/xtable/versions/1.8-3/topics/xtable}%
-	{xtable} (R users)
-\item \href{https://ctan.org/pkg/excel2latex?lang=en}{Excel2latex}
-	(Excel users)
-\item \href{https://uk.mathworks.com/matlabcentral/fileexchange/4894-matrix2latex?s_tid=FX_rc2_behav}%
-	{matrix2latex} (Matlab users)
+  In addition to pgfplotstable there are various other table generators:
+  \begin{itemize}
+    \item \href{https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_latex.html}%
+	    {pandas.DataFrame.to\_latex} (Python users)
+    \item \href{https://www.rdocumentation.org/packages/xtable/versions/1.8-3/topics/xtable}%
+    	{xtable} (R users)
+    \item \href{https://ctan.org/pkg/excel2latex?lang=en}{Excel2latex}
+    	(Excel users)
+    \item \href{https://uk.mathworks.com/matlabcentral/fileexchange/4894-matrix2latex?s_tid=FX_rc2_behav}%
+	    {matrix2latex} (Matlab users)
   \end{itemize}
 \end{frame}
 
-
 \begin{frame}{A few others}
   \begin{columns}
-  	\begin{column}{0.5\textwidth}
+    \begin{column}{0.5\textwidth}
       \begin{itemize}
       	\item \href{http://www.texample.net/tikz/}{tikz}
       	\item \href{https://ctan.org/pkg/standalone?lang=en}{standalone}
@@ -224,8 +235,7 @@ In addition to pgfplotstable there are various other table generators:
   \end{columns}
 \end{frame}
 
-
 \begin{frame}[standout]
-\href{https://jwalton.info/assets/teaching/latex/exercise_3.pdf}%
-{\color{white}Exercise 3}
+  \href{https://jwalton.info/assets/teaching/latex/exercise_3.pdf}%
+  {\color{white}Exercise 3}
 \end{frame}
