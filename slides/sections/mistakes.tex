@@ -30,6 +30,40 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]{Typesetting maths}
+  Brackets should be large enough to completely enclose all they contain.
+  \begin{table}
+    \centering
+    \begin{tabular}{cl}
+      $(\sum\limits_{i=1}^{n-1} i) + n$ \hspace{1cm} &
+        \lstinline|(\sum_{i=1}^{n-1} i) + n| \\ & \\
+      $\bigg(\sum\limits_{i=1}^{n-1} i\bigg) + n$ \hspace{1cm} &
+        \lstinline|\bigg( \sum_{i=1}^{n-1} i \bigg) + n| \\
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Typesetting maths}
+  \begin{table}
+    \centering
+    \begin{tabular}{ll}
+      \color{red}\lstinline|$a, b, c, d, e \text{ and } f$| \hspace{1cm} &
+        \color{red}$a, b, c, d, e \text{ and } f$ \\ & \\
+      \color{mLightGreen}\lstinline|$a$, $b$, $c$, $d$, $e$ and $f$| &
+        \color{mLightGreen}$a$, $b$, $c$, $d$, $e$ and $f$\hspace{1cm}\\& \\
+      \color{red}\lstinline|$i=1,...,10$| &
+        \color{red}$i=1,...,10$ \\ & \\
+      \color{mLightGreen}\lstinline|$i=1,\ldots,10$| &
+        \color{mLightGreen}$i=1,\ldots,10$ \\ & \\
+      \color{red}\lstinline|$sin(x)^2 + cos(x)^2 = 1$| &
+        \color{red}$sin(x)^2 + cos(x)^2 = 1$ \\ & \\
+      \color{mLightGreen}\lstinline|$|\tb\lstinline|sin(x)^2 + |
+        \tb\lstinline|cos(x)^2 =1|\lstinline|$| &
+        \color{mLightGreen}$\sin(x)^2 + \cos(x)^2 = 1$ \\
+    \end{tabular}
+  \end{table}
+\end{frame}
+
 \begin{frame}[fragile]{Hyphen, en-dash and em-dash (-, --, ---)}
   \begin{itemize}
     \item The \textcolor{mLightGreen}{hyphen} (\lstinline|-|) is used to join
@@ -53,7 +87,7 @@
 \end{frame}
 
 \begin{frame}[fragile]{Capitalisation in BibTeX}
-  Your BibTeX style will handle most captitalisation. For some words (names,
+  Your BibTeX style will handle most capitalisation. For some words (names,
   places, \ldots) capitalisation must be ensured
   \begin{lstlisting}
 @book{springer57,
@@ -66,40 +100,3 @@
   \end{lstlisting}
 \end{frame}
 
-\begin{frame}[fragile]{Typing maths}
-  Brackets should be large enough to completely enclose all they contain.
-  \begin{table}
-    \centering
-    \begin{tabular}{cl}
-      $(\sum\limits_{i=1}^{n-1} i) + n$ \hspace{1cm} &
-        \lstinline|(\sum_{i=1}^{n-1} i) + n| \\ & \\
-      $\bigg(\sum\limits_{i=1}^{n-1} i\bigg) + n$ \hspace{1cm} &
-        \lstinline|\bigg( \sum_{i=1}^{n-1} i \bigg) + n| \\
-    \end{tabular}
-  \end{table}
-\end{frame}
-
-\begin{frame}[fragile]{Typing maths}
-  \begin{table}
-    \centering
-    \begin{tabular}{ll}
-      \color{red}\lstinline|$a, b, c, d, e \text{ and } f$| \hspace{1cm} &
-        \color{red}$a, b, c, d, e \text{ and } f$ \\ & \\
-      \color{mLightGreen}\lstinline|$a$, $b$, $c$, $d$, $e$ and $f$| &
-        \color{mLightGreen}$a$, $b$, $c$, $d$, $e$ and $f$\hspace{1cm}\\& \\
-      \color{red}\lstinline|$i=1,...,10$| &
-        \color{red}$i=1,...,10$ \\ & \\
-      \color{mLightGreen}\lstinline|$i=1,\ldots,10$| &
-        \color{mLightGreen}$i=1,\ldots,10$ \\ & \\
-      \color{red}\lstinline|$sin(x)^2 + cos(x)^2 = 1$| &
-        \color{red}$sin(x)^2 + cos(x)^2 = 1$ \\ & \\
-      \color{mLightGreen}\lstinline|$|\tb\lstinline|sin(x)^2 + |
-        \tb\lstinline|cos(x)^2 =1|\lstinline|$| &
-        \color{mLightGreen}$\sin(x)^2 + \cos(x)^2 = 1$ \\
-    \end{tabular}
-  \end{table}
-\end{frame}
-
-\begin{frame}[standout]
-  Exercise 4
-\end{frame}

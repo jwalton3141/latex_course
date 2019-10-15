@@ -1,20 +1,20 @@
 \section{Managing a bibliography}
 
-\begin{frame}[fragile]{BibTex}
-  \href{https://ctan.org/pkg/bibtex?lang=en}{BibTex}
+\begin{frame}[fragile]{BibTeX}
+  \href{https://ctan.org/pkg/bibtex?lang=en}{BibTeX}
   can be used to manage bibliographies.
   (\href{https://ctan.org/pkg/biblatex?lang=en}{BibLaTeX}
   is a more sophisticated alternative.)
 
   \begin{itemize}
-    \item BibTex entries are stored in a \texttt{.bib} file
+    \item BibTeX entries are stored in a \texttt{.bib} file
     \item I recommend maintaining a \emph{single} centralised \texttt{.bib}
       file for the duration of your PhD.
   \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{BibTex entries}
-  A list of entry types which BibTex understands can be
+\begin{frame}[fragile]{BibTeX entries}
+  A list of entry types which BibTeX understands can be
   \href{http://bib-it.sourceforge.net/help/fieldsAndEntryTypes.php#Entries}%
     {found here}.
 
@@ -29,10 +29,10 @@
   \end{lstlisting}
 \end{frame}
 
-\begin{frame}[fragile]{Referencing with BibTex}
+\begin{frame}[fragile]{Referencing with BibTeX}
   \begin{itemize}
     \item References are included as \lstinline|\cite{knuth84}|, where
-      \texttt{knuth84} is the \lstinline|title| of a BibTex entry
+      \texttt{knuth84} is the \lstinline|title| of a BibTeX entry
     \item Include your \texttt{.bib} file with
       \lstinline|\bibliography{references}|, where \texttt{references} is the
       name of your file
@@ -51,7 +51,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Compiling with BibTex}
+\begin{frame}{Compiling with BibTeX}
   BibTeX adds extra complexity to the processing of your manuscript. You will
   have to run \LaTeX\ a number of times.
 
