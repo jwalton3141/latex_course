@@ -1,19 +1,42 @@
-\documentclass[12pt]{report}
+% Question 1) This file should be saved as macros.tex and saved in the 
+% sage_latex/ folder
+% Question 2) Any document class will do here, report, book, etc.
+\documentclass{article}
 
+% (Not part of the solution, I just like the font)
+\IfFileExists{MinionPro.sty}{%
+  \usepackage[mathtabular,minionint,mathlf]{MinionPro}
+}
+
+% (Not part of solution, just general styling)
+\usepackage{xcolor}
+\setlength\parindent{0pt}
+\pagenumbering{gobble}
+
+% Question 3)
 \newcommand{\newt}{$F = m \ddot{x}$}
+% Question 5)
 \newcommand{\triang}[1]{$\Sigma_{i=1}^{#1} i$}
+% Question 7)
 \newcommand{\gauss}[1][\infty]{$\int_{-#1}^{#1} e^{-x^2} \textrm{d}x$}
 
 \begin{document}
 
+\begin{center}
+  \Large\color{black!80}\textsc{Solutions 2}
+\end{center}
+
+% Question 4)
 From Newton's second law we have that \newt.\\
 
+% Question 6)
 The triangular numbers \triang{3}=6, \triang{7}=28 and
 \triang{31}=496 are also examples of perfect numbers.\\
 
+% Question 8)
 The Gaussian integral, also known as the Euler-Poisson
 integral, evaluates to \gauss=$\sqrt{\pi}$. For a complete proof
 of this result we shall consider $I(a)$=\gauss[a] and the limit
-$\lim_{a\rightarrow\infty} I(a)$
+$\lim_{a\rightarrow\infty} I(a)$.
 
 \end{document}
