@@ -17,38 +17,38 @@ get stuck at any point put your hand up and I'll come over to help.
     \texttt{macros.tex}.
 
   \item Give \texttt{macros.tex} a \texttt{documentclass}.
-  Ensure you can compile \texttt{macros.tex} with some dummy text in the document
-  body.
+    Ensure you can compile \texttt{macros.tex} with some dummy text in the document
+    body.
 
   \item Create a macro \texttt{\tb newt} which typesets the 
-  equation $F = m \ddot{x}$. \textsl{Hint:} In math-mode two dots can be typeset
-  above a letter with \texttt{\tb ddot}.
+    equation $F = m \ddot{x}$. \textsl{Hint:} In math-mode two dots can be typeset
+    above a letter with \texttt{\tb ddot}.
 
   \item Add the line ``\texttt{From Newton's second law we have that
-  \tb newt.}'' to the body of \texttt{macros.tex}. Ensure that 
-  \texttt{macros.tex} compiles.
+    \tb newt.}'' to the body of \texttt{macros.tex}. Ensure that 
+    \texttt{macros.tex} compiles.
 
   \item Create a macro \texttt{\tb triang} which takes one argument.
-  This macro should typeset the summation $\Sigma_{i=1}^N i$ where $N$ is 
-  specified by a parameter passed to \texttt{\tb triang}.
+    This macro should typeset the summation $\Sigma_{i=1}^N i$ where $N$ is 
+    specified by a parameter passed to \texttt{\tb triang}.
 
   \item Add the line ``\texttt{The triangular numbers
-  \tb triang\{3\}=6, \tb triang\{7\}=28 
-  and \tb triang\{31\}=496 are also examples of perfect numbers.}'' 
-  to \texttt{macros.tex}. Ensure you can compile \texttt{macros.tex}.
+    \tb triang\{3\}=6, \tb triang\{7\}=28 
+    and \tb triang\{31\}=496 are also examples of perfect numbers.}'' 
+    to \texttt{macros.tex}. Ensure you can compile \texttt{macros.tex}.
   
   \item Create a macro \texttt{\tb gauss} to typeset the 
-  integral: $\int_{-\infty}^{\infty} e^{-x^2} \textrm{d}x$. Change
-  \texttt{\tb gauss} so that it takes a parameter which sets the
-  symmetric limits of the integral. Finally, alter \texttt{\tb gauss}
-  so that its default parameter is \texttt{\tb infty}.
+    integral: $\int_{-\infty}^{\infty} e^{-x^2} \textrm{d}x$. Change
+    \texttt{\tb gauss} so that it takes a parameter which sets the
+    symmetric limits of the integral. Finally, alter \texttt{\tb gauss}
+    so that its default parameter is \texttt{\tb infty}.
 
   \item Add the line ``\texttt{The Gaussian integral, also known as the
-  Euler-Poisson integral, evaluates to
-  \tb gauss=\$\tb sqrt\{\tb pi\}\$. For
-  a complete proof \\ of this result we shall consider \$I(a)\$=\tb gauss[a]
-  and the limit \\\$\tb lim\_\{a\tb rightarrow\tb infty\} I(a)\$}''. Again,
-  ensure that you can compile\\ \texttt{macros.tex} with this line included.
+    Euler-Poisson integral, evaluates to
+    \tb gauss=\$\tb sqrt\{\tb pi\}\$. For
+    a complete proof \\ of this result we shall consider \$I(a)\$=\tb gauss[a]
+    and the limit \\\$\tb lim\_\{a\tb rightarrow\tb infty\} I(a)\$}''. Again,
+    ensure that you can compile\\ \texttt{macros.tex} with this line included.
  
 \end{enumerate}
 
