@@ -76,10 +76,41 @@
 \end{frame}
 
 \begin{frame}{Citations from Google Scholar}
-Google scholar can be used to export citations easily.
+  Google scholar can be used to export citations easily.
   \begin{figure}
     \centering
     \includegraphics[width=0.85\textwidth]{scholar_bib2.png}
   \end{figure}
 \end{frame}
 
+\begin{frame}[fragile]{Repetitive entries: journals}
+  You might find yourself referencing a particular journal repetitively.
+  The \lstinline|\@string| entry helps by defining an abbreviation:
+  \begin{lstlisting}
+@string{PNAS = "Proceedings of the National Academy of
+                Sciences of the United States of America"}
+@Article{paper1,
+  Journal = PNAS, 
+  ...
+}
+@Article{paper2,
+  Journal = PNAS, 
+  ...
+}
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Repetitive entries: authors}
+  Similarly, for authors:
+  \begin{lstlisting}
+@string{gelman = "Andrew Gelman"}
+@Article{paper3,
+  Author = gelman, 
+  ...
+}
+@Article{paper4,
+  Author = gelman # " and Steve Brooks"
+  ...
+}
+  \end{lstlisting}
+\end{frame}
